@@ -1,0 +1,10 @@
+- @users.each do |user|
+  %tr
+    %td
+      %img{ src: user['profile_image_url'] }
+    %td
+      %a{href: "https://twitter.com/#{user['screen_name']}", target: '_blank'}
+        =user['screen_name']
+    %td= user['friends_count']
+    %td= user['followers_count']
+    %td= user['last_tweeted_at']
